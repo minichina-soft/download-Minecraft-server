@@ -1,0 +1,10 @@
+import os 
+server_name=str(input("服务端名称(bukkit/craftbukkit/spigot):")) 
+version=str(input("版本:")) 
+if server_name == "bukkit" or server_name =="craftbukkit" : 
+    server_name="craftbukkit" 
+elif server_name == "spigot" : 
+    server_name="spigot" 
+url="https://download.getbukkit.org/"+server_name+"/"+server_name+"-"+version+".jar" 
+command="start "+url 
+os.system(command)
